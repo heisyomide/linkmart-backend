@@ -51,5 +51,9 @@ app.use('/api/paystack', paystackRoute)
 // Health check
 app.get('/health', (_, res) => res.json({ ok: true }));
 
+app.get("/", (req, res) => {
+  res.send("🚀 Linkmart Backend API is running successfully!");
+});
+
 // Start server
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
